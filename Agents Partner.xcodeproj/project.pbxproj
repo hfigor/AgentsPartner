@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1B9FAE2278A8AA00157DAA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAD2278A8A900157DAA /* Realm.framework */; };
+		3C1B9FB02278A8C100157DAA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */; };
+		3C1B9FB22278A90A00157DAA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B9FB12278A90A00157DAA /* README.md */; };
+		3C1B9FB32278B81500157DAA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */; };
+		3C1B9FB42278B81500157DAA /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1B9FB62278B81A00157DAA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAD2278A8A900157DAA /* Realm.framework */; };
+		3C1B9FB72278B81A00157DAA /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAD2278A8A900157DAA /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		553A7755217F98CA008B1BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553A7754217F98CA008B1BAF /* AppDelegate.swift */; };
 		553A775A217F98CA008B1BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553A7758217F98CA008B1BAF /* Main.storyboard */; };
 		553A775C217F98CB008B1BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553A775B217F98CB008B1BAF /* Assets.xcassets */; };
@@ -20,7 +27,25 @@
 		553A7776217FA517008B1BAF /* SpecimenAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553A776F217FA517008B1BAF /* SpecimenAnnotation.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3C1B9FB52278B81500157DAA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C1B9FB72278B81A00157DAA /* Realm.framework in Embed Frameworks */,
+				3C1B9FB42278B81500157DAA /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3C1B9FAD2278A8A900157DAA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		3C1B9FB12278A90A00157DAA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		553A7751217F98CA008B1BAF /* Agents Partner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agents Partner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553A7754217F98CA008B1BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		553A7759217F98CA008B1BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,16 +66,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1B9FB62278B81A00157DAA /* Realm.framework in Frameworks */,
+				3C1B9FB02278A8C100157DAA /* RealmSwift.framework in Frameworks */,
+				3C1B9FAE2278A8AA00157DAA /* Realm.framework in Frameworks */,
+				3C1B9FB32278B81500157DAA /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1B9FAC2278A86B00157DAA /* Realm Swift */ = {
+			isa = PBXGroup;
+			children = (
+				3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */,
+				3C1B9FAD2278A8A900157DAA /* Realm.framework */,
+			);
+			name = "Realm Swift";
+			path = "Agents Partner";
+			sourceTree = "<group>";
+		};
 		553A7748217F98CA008B1BAF = {
 			isa = PBXGroup;
 			children = (
 				553A7753217F98CA008B1BAF /* Agents Partner */,
+				3C1B9FAC2278A86B00157DAA /* Realm Swift */,
 				553A7752217F98CA008B1BAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +106,7 @@
 		553A7753217F98CA008B1BAF /* Agents Partner */ = {
 			isa = PBXGroup;
 			children = (
+				3C1B9FB12278A90A00157DAA /* README.md */,
 				553A7754217F98CA008B1BAF /* AppDelegate.swift */,
 				553A7777217FA526008B1BAF /* Cells */,
 				553A7778217FA532008B1BAF /* Model */,
@@ -132,6 +173,7 @@
 				553A774D217F98CA008B1BAF /* Sources */,
 				553A774E217F98CA008B1BAF /* Frameworks */,
 				553A774F217F98CA008B1BAF /* Resources */,
+				3C1B9FB52278B81500157DAA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +224,7 @@
 			files = (
 				553A775F217F98CB008B1BAF /* LaunchScreen.storyboard in Resources */,
 				553A775C217F98CB008B1BAF /* Assets.xcassets in Resources */,
+				3C1B9FB22278A90A00157DAA /* README.md in Resources */,
 				553A775A217F98CA008B1BAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +390,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N24V4NH8BJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Agents\\ Partner/**",
+					"$(PROJECT_DIR)/Agents\\ Partner",
+					"$(PROJECT_DIR)/Agents\\ Partner",
+				);
 				INFOPLIST_FILE = "Agents Partner/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -364,6 +414,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N24V4NH8BJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Agents\\ Partner/**",
+					"$(PROJECT_DIR)/Agents\\ Partner",
+					"$(PROJECT_DIR)/Agents\\ Partner",
+				);
 				INFOPLIST_FILE = "Agents Partner/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
