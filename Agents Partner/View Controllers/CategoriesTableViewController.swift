@@ -29,6 +29,7 @@
  */
 
 import UIKit
+import RealmSwift
 
 //
 // MARK: - Categories Table View Controller
@@ -37,14 +38,24 @@ class CategoriesTableViewController: UITableViewController {
   //
   // MARK: - Variables And Properties
   //
-  var categories: [Any] = []
+    // var categories: [Any] = [] replace with this:
+    let realm = try! Realm()
+    lazy var categories: Results<Category> = {self.realm.objects(Category.self)}()
+    
+    var selectedCategory: Category!
   
   //
   // MARK: - View Controller
   //
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
+ 
+    populateDefaultCategories()
+    
+     }
+    
+    
+   
 }
 
 //
@@ -54,6 +65,8 @@ extension CategoriesTableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
     
+    let category = categories[indexPath.row]
+    cell.textLabel?.text = category.name
     return cell
   }
   
@@ -62,6 +75,28 @@ extension CategoriesTableViewController {
   }
   
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    selectedCategory = categories[indexPath.row]
     return indexPath
   }
+}
+
+extension CategoriesTableViewController {
+    
+    private func populateDefaultCategories() {
+        if categories.count == 0 { //1
+            try! realm.write() {
+                let defaultCategories = ["Birds", "Mammals", "Flora", "Reptiles", "Arachnids" ] // 3
+                
+                for category in defaultCategories { // 4
+                    let newCategory = Category()
+                    newCategory.name = category
+                    
+                    realm.add(newCategory)
+                }
+            }
+            
+            categories = realm.objects(Category.self) // 5
+        }
+    }
+  
 }

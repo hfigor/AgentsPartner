@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C1B9FAE2278A8AA00157DAA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAD2278A8A900157DAA /* Realm.framework */; };
 		3C1B9FB02278A8C100157DAA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */; };
 		3C1B9FB22278A90A00157DAA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B9FB12278A90A00157DAA /* README.md */; };
-		3C1B9FB32278B81500157DAA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */; };
 		3C1B9FB42278B81500157DAA /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C1B9FB62278B81A00157DAA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAD2278A8A900157DAA /* Realm.framework */; };
 		3C1B9FB72278B81A00157DAA /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1B9FAD2278A8A900157DAA /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1B9FB9227B2F0B00157DAA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B9FB8227B2F0B00157DAA /* Category.swift */; };
 		553A7755217F98CA008B1BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553A7754217F98CA008B1BAF /* AppDelegate.swift */; };
 		553A775A217F98CA008B1BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553A7758217F98CA008B1BAF /* Main.storyboard */; };
 		553A775C217F98CB008B1BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553A775B217F98CB008B1BAF /* Assets.xcassets */; };
@@ -46,6 +45,7 @@
 		3C1B9FAD2278A8A900157DAA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		3C1B9FAF2278A8C100157DAA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		3C1B9FB12278A90A00157DAA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		3C1B9FB8227B2F0B00157DAA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		553A7751217F98CA008B1BAF /* Agents Partner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agents Partner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553A7754217F98CA008B1BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		553A7759217F98CA008B1BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,8 +68,6 @@
 			files = (
 				3C1B9FB62278B81A00157DAA /* Realm.framework in Frameworks */,
 				3C1B9FB02278A8C100157DAA /* RealmSwift.framework in Frameworks */,
-				3C1B9FAE2278A8AA00157DAA /* Realm.framework in Frameworks */,
-				3C1B9FB32278B81500157DAA /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +157,7 @@
 			children = (
 				553A7769217FA517008B1BAF /* Specimen.swift */,
 				553A776F217FA517008B1BAF /* SpecimenAnnotation.swift */,
+				3C1B9FB8227B2F0B00157DAA /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,7 +190,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Razeware LLC";
 				TargetAttributes = {
 					553A7750217F98CA008B1BAF = {
@@ -241,6 +240,7 @@
 				553A7773217FA517008B1BAF /* LogCell.swift in Sources */,
 				553A7755217F98CA008B1BAF /* AppDelegate.swift in Sources */,
 				553A7774217FA517008B1BAF /* LogViewController.swift in Sources */,
+				3C1B9FB9227B2F0B00157DAA /* Category.swift in Sources */,
 				553A7771217FA517008B1BAF /* CategoriesTableViewController.swift in Sources */,
 				553A7775217FA517008B1BAF /* MapViewController.swift in Sources */,
 				553A7776217FA517008B1BAF /* SpecimenAnnotation.swift in Sources */,
@@ -404,7 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.Agents-Partner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -428,7 +428,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.Agents-Partner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
